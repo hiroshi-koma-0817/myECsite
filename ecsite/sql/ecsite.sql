@@ -40,11 +40,13 @@ create table user_buy_item_transaction(
   delete_date datetime
   );
 
-  create table user(
+drop table if exists user_info;
+
+  create table user_info(
 user_name varchar(255),
 password varchar(255)
 );
-insert into user values("koma","hiroshi");
+insert into user_info values("koma","hiroshi");
 
 INSERT INTO item_info_transaction(item_name,item_price,item_stock)VALUES("ノートBook",100,50);
 
